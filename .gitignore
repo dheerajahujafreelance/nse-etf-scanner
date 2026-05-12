@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.venv
+logs/*.log
+data/*.csv
+!data/etf_symbols.csv
+.pytest_cache/
+.vscode/
+.idea/
+*.pyc
