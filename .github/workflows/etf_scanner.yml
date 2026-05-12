@@ -18,10 +18,14 @@ on:
 jobs:
   scan-etfs:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
   # Add write permissions
     permissions:
       contents: write
       actions: read
+
 
    
     steps:
