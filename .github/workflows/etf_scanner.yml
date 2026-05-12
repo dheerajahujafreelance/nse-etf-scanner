@@ -9,7 +9,7 @@ on:
     # 3:00 PM IST = 9:30 AM UTC
     - cron: '30 6,8,9 * * 1-5'  # Mon-Fri at 6:30, 8:30, 9:30 UTC
   
-#  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:  # Allow manual trigger
 #     inputs:
 #      custom_symbols:
 #        description: 'Custom ETF symbols (comma-separated)'
