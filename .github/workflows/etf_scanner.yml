@@ -18,7 +18,12 @@ on:
 jobs:
   scan-etfs:
     runs-on: ubuntu-latest
-    
+  # Add write permissions
+    permissions:
+      contents: write
+      actions: read
+
+   
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
