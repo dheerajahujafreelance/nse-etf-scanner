@@ -1,0 +1,14 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="nse-etf-scanner",
+    version="1.0.0",
+    packages=find_packages(),
+    install_requires=[
+        "yfinance>=0.2.28",
+        "pandas>=2.0.0",
+        "python-dotenv>=1.0.0",
+        "requests>=2.31.0",
+        "pytz>=2023.3",
+    ],
+)
