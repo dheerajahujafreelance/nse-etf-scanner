@@ -8,25 +8,24 @@ on:
     # 2:00 PM IST = 8:30 AM UTC  
     # 3:00 PM IST = 9:30 AM UTC
     - cron: '30 6,8,9 * * 1-5'  # Mon-Fri at 6:30, 8:30, 9:30 UTC
-  workflow_dispatch:  # Allow manual trigger
-    inputs:
-      custom_symbols:
-        description: 'Custom ETF symbols (comma-separated)'
-        required: false
-        default: ''
+#  workflow_dispatch:  # Allow manual trigger
+#    inputs:
+ #     custom_symbols:
+  #      description: 'Custom ETF symbols (comma-separated)'
+   #     required:  false
+    #    default: ''
+
+  # Add write permissions
+permissions:
+      contents: write
+      actions: read
+
 
 jobs:
   scan-etfs:
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  
-  # Add write permissions
-    permissions:
-      contents: write
-      actions: read
-
-
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Suppress Node.js 20 deprecation warning
    
     steps:
     - name: Checkout code
