@@ -1,13 +1,13 @@
 name: ETF Daily Scanner - Indian Market Hours
 
 on:
-#  schedule:
+  schedule:
     # Schedule at 12:00 PM, 2:00 PM, 3:00 PM IST
     # Convert IST to UTC (IST = UTC+5:30)
     # 12:00 PM IST = 6:30 AM UTC
     # 2:00 PM IST = 8:30 AM UTC  
     # 3:00 PM IST = 9:30 AM UTC
- #   - cron: '30 6,8,9 * * 1-5'  # Mon-Fri at 6:30, 8:30, 9:30 UTC
+    - cron: '30 6,8,9 * * 1-5'  # Mon-Fri at 6:30, 8:30, 9:30 UTC
   
    workflow_dispatch:  # Allow manual trigger
 #     inputs:
